@@ -1,0 +1,164 @@
+/* body {
+    padding-top: 10px;
+} */
+
+#keyboard {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 510px;
+}
+
+#header {
+    /* margin-left: auto;
+    margin-right: auto;
+    width: 900px; */
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: -5px;
+}
+
+#text-box {
+    margin: auto;
+    width: 510;
+    /* text-align: center; */
+    font-size: 20px;
+    min-height: 270px;
+}
+
+#key {
+    height: 36px;
+}
+
+#row2 {
+    max-width: 420px;
+    margin-top: -25px;
+    margin-left: 10px
+}
+
+#row3 {
+    max-width: 420px;
+    margin-top: -25px;
+    /* margin-left: 30px; */
+}
+
+.compact.ui.button.key {
+    height: 40px;
+    width: 45px;
+    margin-right: 0px;
+}
+
+.compact.ui.button.space {
+    height: 40px;
+    width: 414px;
+    margin-right: 0px;
+}
+
+.compact.ui.button.delete {
+    height: 40px;
+    width: 93;
+    margin-right: 0px;
+}
+
+.item.option {
+    cursor: pointer;
+}
+
+.item.option:hover {
+    color: black;
+}
+
+.item.active-option {
+    color: black;
+}
+
+#row-2 {
+    margin-top: 3px;
+    margin-left: 10px;
+}
+
+#row-3 {
+    margin-top: 3px;
+    margin-left: 35px;
+}
+
+#row-4 {
+    margin-top: 3px;
+}
+
+#layout-selector-div {
+    margin-top: 13px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 510px;
+}
+
+#layout-selector {
+    /* width: 150px; */
+}
+
+#card-footer {
+    font-size: 14px;
+}
+
+#info-message {
+    width: 510px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#restart-icon {
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+#restart-icon:hover {
+    color: black;
+}
+
+#delete-key {
+    margin-left: -6px;
+    margin-right: -100px;
+    margin-top: -3px;
+    font-size: 37.5px;
+    color: #c7c7c7;
+}
+
+#status-text {
+    cursor: default;
+}
+
+#text-content {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.untyped-text {
+    color: gray;
+}
+
+.typed-text {
+    color: black
+}
+
+.wrong-text {
+    color: red;
+}
+
+.extra-text {
+    color: darkred;
+}
+
+#statistics-div {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    width: 300px;
+}
+
+.hidden {
+    display: none;
+}
