@@ -2,9 +2,12 @@ const splitText = all_text.split(' ');
 let testLength = 25;
 let maxSplitPoint = splitText.length-testLength;
 
-const rstlne = 'qagwsxdecfrvzl?;hbunjkimyo,pt. '
-const twof = 'jxmwsdrnlctbzgvqhyuafie,op.k;? '
-const onef = 'vgfcdnlatreoismhupwy.b,xkzjq;? '
+const rstlne = 'qagwsxdecfrvzl?;hbunjkimyo,pt. ';
+const twof = 'jxmwsdrnlctbzgvqhyuafie,op.k;? ';
+const onef = 'vgfcdnlatreoismhupwy.b,xkzjq;? ';
+
+const deleteIndex = 31;
+const spaceIndex = 30;
 
 let curIndex = 0;
 let curLayout = rstlne;
@@ -17,6 +20,7 @@ let endTime;
 $(document).ready(() => {
     resetText();
 
+		// add layouts to dropdown menu and add onChange lambda
     $('#layout-selector')
         .dropdown({
             values: [
@@ -75,25 +79,28 @@ $(document).ready(() => {
         resetText();
     });
 
-    for(let i=0; i<=31; i++) {
+		// for each key in the current layout, plus the backspace/delete key
+    for(let i = 0; i <= curLayout.length + 1; i++) {
+    		// add on-click lambda to each key
         $(`#key-${i}`).click(function() {
+            // get key index from html id of visual key element
             let index = parseInt(this.id.split('-')[1])
-            if (index == 31) {
+            // enables backspace / delete feature
+            if (index == deleteIndex) {
+                // if typedText isn't empty
                 if (typedText.length > 0) {
+                    // remove 1 character from end of typed text
                     typedText = typedText.substring(0, typedText.length-1)
                 }
-            } else if (index == 30) {
-                if (typedText.length > 0) {
-                    typedText += curLayout[index]
-                }
             } else {
+                // if start time was reset, set it to current time
                 if (startTime == 0) {
                     startTime = Date.now();
                 }
+                // add character corresponding to pressed key
                 typedText += curLayout[index]
             }
-            let formatText = evaluateText()
-            updateText(formatText)
+            updateText(evaluateText())
         });
     }
 })
