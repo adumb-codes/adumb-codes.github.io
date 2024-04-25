@@ -1,0 +1,233 @@
+:root {
+    --match-name-length: 105;
+    --match-name-length-1100: 70;
+    --match-name-length-800: 52;
+    --match-name-length-500: 42;
+    --description-length: 142;
+    --description-length-1100: 95;
+    --description-length-800: 71;
+    --description-length-500: 57;
+}
+
+html, body {
+    background-color: #1a1a1a;
+    color: #f1f1f1;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#clock-container { 
+    height: 100%;
+    position: relative;
+}
+  
+#clock-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 95vw;
+}
+
+@font-face {
+    font-family: ChivoMono;
+    src: url(../themes/default/assets/fonts/ChivoMono-Light.ttf);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: ChivoMono;
+    src: url(../themes/default/assets/fonts/ChivoMono-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: ChivoMono;
+    src: url(../themes/default/assets/fonts/ChivoMono-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: ChivoMono;
+    src: url(../themes/default/assets/fonts/ChivoMono-ExtraBold.ttf);
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: ChivoMono;
+    src: url(../themes/default/assets/fonts/ChivoMono-ExtraBoldItalic.ttf);
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: ChivoMono;
+    src: url(../themes/default/assets/fonts/ChivoMono-Black.ttf);
+    font-weight: 900;
+}
+
+#info {
+    margin: 0;
+    position: absolute;
+    top:90%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 95vw;
+    font-family: 'ChivoMono', monospace;
+    font-weight: 400;
+    font-size: 1vw;
+    color: #c7c7c7;
+    visibility: hidden;
+}
+
+#socials a {
+    font-size: 2vw;
+    color: #c7c7c7;
+    text-decoration: none;
+}
+
+.description {
+    color: #f1f1f1;
+    font-family: 'ChivoMono', monospace;
+    font-weight: 300;
+    margin: 0;
+    font-size: calc(95vw / var(--description-length) * 1.65);
+}
+
+#hidden-description {
+    visibility: hidden;
+}
+
+#score {
+    margin: 0;
+    font-family: 'ChivoMono', monospace;
+    font-weight: 900;
+    font-size: 10vw;
+    white-space: nowrap;
+}
+
+.score-num {
+    color: #a561f2;
+}
+
+.highlight {
+    color: #b179f2;
+    font-weight: 700;
+}
+
+#match-name {
+    font-weight: 800;
+    font-size: calc(95vw / var(--match-name-length) * 1.6578947368);
+}
+
+#date {
+    white-space: nowrap;
+}
+
+#buttons {
+    width: 21vw;
+    margin: 0 auto;
+}
+
+#info-button {
+    float: left;
+    cursor: pointer;
+}
+
+#info-button:hover {
+    color: #c7c7c7;
+}
+
+#random-button {
+    float: right;
+    cursor: pointer;
+}
+
+#random-button:hover {
+    color: #c7c7c7;
+}
+
+.material-symbols-outlined {
+    font-size: 3vw;
+}
+
+@media only screen and (max-width: 1100px) {
+    #score {
+        font-size: 15vw;
+    }
+    .description {
+        font-size: calc(95vw / var(--description-length-1100) * 1.65);
+    }
+    #match-name {
+        font-size: calc(95vw / var(--match-name-length-1100) * 1.6578947368);
+    }
+    #buttons {
+        width: 31.5vw;
+    }
+    .material-symbols-outlined {
+        font-size: 4.5vw;
+    }
+    #info {
+        font-size: 1.5vw;
+    }
+    #socials a {
+        font-size: 3vw;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #score {
+        font-size: 20vw;
+    }
+    .description {
+        font-size: calc(95vw / var(--description-length-800) * 1.65);
+    }
+    #match-name {
+        font-size: calc(95vw / var(--match-name-length-800) * 1.6578947368);
+    }
+    #buttons {
+        width: 42vw;
+    }
+    .material-symbols-outlined {
+        font-size: 6vw;
+    }
+    #info {
+        font-size: 2vw;
+    }
+    #socials a {
+        font-size: 4vw;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #score {
+        font-size: 25vw;
+    }
+    .description {
+        font-size: calc(95vw / var(--description-length-500) * 1.65);
+    }
+    #match-name {
+        font-size: calc(95vw / var(--match-name-length-500) * 1.6578947368);
+    }
+    #buttons {
+        width: 52.5vw;
+    }
+    .material-symbols-outlined {
+        font-size: 7.5vw;
+    }
+    #info {
+        font-size: 2.5vw;
+    }
+    #socials a {
+        font-size: 5vw;
+    }
+}
